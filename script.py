@@ -3,11 +3,12 @@ import os
 import pandas as pd
 import numpy as np
 import glob
+import codecs
 
 path="./data"
 filenames = glob.glob(path + "/*.js")
 for file in filenames:
-    with open(file, 'r', encoding='utf-8') as read_file:
+    with codecs.open(file, 'r', encoding='utf-8') as read_file:
         data=read_file.read()
         data=data.partition("=")
         data=data[2]
