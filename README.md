@@ -17,9 +17,13 @@ After using recursion, the script saves the output (i.e. single csv per .js) int
 ## Input
 Once you download your Twitter archive in .js format, unzip the dowload file. Within the unzipped directory, you will have a `data` folder. This fodler will contain all the .js files that would be the part of your dump. 
 
-Give the path of `data ` folder to the variable named path in `script.py`.
+~~Give the path of `data ` folder to the variable named path in `script.py`.~~ 
+
+__Create or Drop the `script.py` next to the `data` folder.__
 
 ## Output
-Output of `script.py` is a .csv per .js file. It will create csvs and store them in a separate directory called `csvs` that would be in the same path as the input `data`directory. 
+Output of `script.py` is a .csv per .js file. It will create csvs and store them in a separate directory called `csvs` that would be ~~in the same path as the input~~ __next to the__ `data` directory. 
 
-**Click [here](https://gist.github.com/hussam95/af86a2702e2482238b9713049134ac3e) to view the code gist.**
+~~**Click [here](https://gist.github.com/hussam95/af86a2702e2482238b9713049134ac3e) to view the code gist.**~~ 
+
+__Click on the `script.py` to see and check the code__
