@@ -4,10 +4,10 @@ import pandas as pd
 import numpy as np
 import glob
 
-path="/home/hussam/Desktop/twitter_parse/twitter_parse_virtual_env/data"
+path="./data"
 filenames = glob.glob(path + "/*.js")
 for file in filenames:
-    with open(file) as read_file:
+    with open(file, 'r', encoding='utf-8') as read_file:
         data=read_file.read()
         data=data.partition("=")
         data=data[2]
@@ -36,5 +36,5 @@ for file in filenames:
         #let's feed the json to our recursive function
         parse_json_recursively(developer)
         df=pd.DataFrame(dict([(k,pd.Series(v)) for k,v in dic.items()]))
-        os.makedirs("/home/hussam/Desktop/twitter_parse/twitter_parse_virtual_env/csvs", exist_ok=True)
-        df.to_csv("/home/hussam/Desktop/twitter_parse/twitter_parse_virtual_env/csvs"+"/"+"{}.csv".format(prefix))
+        os.makedirs("./csvs", exist_ok=True)
+        df.to_csv("./csvs"+"/"+"{}.csv".format(prefix))
